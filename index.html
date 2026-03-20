@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>💖</title>
+<style>
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+}
+.text {
+  font-size: 32px;
+  z-index: 1;
+}
+.heart {
+  position: fixed;
+  top: 100vh;
+  animation: up 4s linear forwards;
+}
+@keyframes up {
+  to {
+    transform: translateY(-110vh);
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="text">كل عام وانتي بخير تبارك ❤️</div>
+
+<script>
+setInterval(() => {
+  let h = document.createElement("div");
+  h.className = "heart";
+  h.innerHTML = "💖";
+  h.style.left = Math.random() * 100 + "vw";
+  h.style.fontSize = (20 + Math.random() * 30) + "px";
+  document.body.appendChild(h);
+  setTimeout(() => h.remove(), 4000);
+}, 300);
+</script>
+
+</body>
+</html>
